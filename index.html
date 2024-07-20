@@ -14,35 +14,67 @@
 </head>
 <body>
     
-        <header id="header">
-            <a href="" class="logo">logo</a>
-            <div id="hmb">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="">TOP</a></li>
-                    <li><a href="">introduction</a></li>
-                    <li><a href="">skills</a></li>
-                    <li><a href="">My works</a></li>
-                </ul>
-            </nav>
-
-        </header>
+    <header id="header">
+        <a href="" class="logo">logo</a>
+        <div id="hmb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">TOP</a></li>
+                <li><a href="#intro">introduction</a></li>
+                <li><a href="">skills</a></li>
+                <li><a href="">My works</a></li>
+            </ul>
+        </nav>
+    </header>
   
-        <main>
-            <section id="hero"></section>
-        </main>
-        <footer>footer</footer>
+    <main>
+        <section id="hero">
+            <img src="./素材/Mylogo.png"width="25%" alt="コメ">
+            <div class="container">
+                <h1>NUMA's</h1>
+                <h1>portfolio</h1>
+            </div>
+        </section>
+        <section id="intro">
+            <h2>My introduction</h2>
+            <div class="intro">
+                <div class="face">
+                    <img src="素材/face.png" alt="">
+                </div>
+                <div class="introtext">
+                    <h3>飯沼佑斗</h3>
+                    <div class="origin">
+                        <p>私の経歴</p>
+                        <ul>
+                            <li>2023年:岐阜県某公立高校卒業</li>
+                            <li>2023年:同年愛知工業大学へ進学し在学中</li>
+                        </ul>
+                    </div>
+                    <div class="order">
+                        <p>業務内容</p>
+                        <ul>
+                            <li>Adobeソフトを使用したコンテンツ制作</li>
+                            <li>AutoDesk Mayaを使用した3D制作</li>
+                            <li>HTML&CSSを使用したコーディング</li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+
+        </section>
+    </main>
+    <footer>footer</footer>
         
-        <script>
-          const hmbBtn = document.getElementById("hmb");
-          const header = document.getElementById("header");
-          hmbBtn.addEventListener("click", function() {
-            header.classList.toggle("active");
-          });
-        </script>
+    <script>
+      const hmbBtn = document.getElementById("hmb");
+      const header = document.getElementById("header");
+      hmbBtn.addEventListener("click", function() {
+        header.classList.toggle("active");
+      });
+    </script>
 </body>
 </html>

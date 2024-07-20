@@ -1,89 +1,181 @@
-html{
-    font-family:'M PLUS 1',sans-serif;
-    overflow-x:hidden;
-}
-main,footer{
-    text-align:center;
-    padding:100px;
+html {
+    font-family: 'M PLUS 1', sans-serif;
+    overflow-x: hidden;
 }
 
-#header{
-    width:90%;
-    max-width:1000px;
-    height:70px;
-    margin:0 auto;
-    display:flex;
-    justify-content:space-between;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 100px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#header {
+    height: 70px;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
 }
-/*非アクティブ*/
-#hmb{
-    
-    width:32px;
-    height:28px;
-    cursor:pointer;
-    position:relative;
-    z-index: 30;
-}
-#hmb span{
-    width:32px;
-    height:3px;
-    display:block;
-    background-color:#000000;
-    border-radius:2px;
-    position:absolute;
-    transition:.2s;
-}
-#hmb span:first-child{top:0}
-#hmb span:nth-child(2){top:12px;}
-#hmb span:last-child{top:24px;}
 
-nav{
-    position:fixed;
-    top:0;
-    right:0;
-    width:240px;
-    max-width:400px;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    padding:20px;
-    background-color:whitesmoke;
+#hmb {
+    width: 32px;
+    height: 28px;
+    cursor: pointer;
+    position: relative;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#hmb span {
+    width: 32px;
+    height: 3px;
+    display: block;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: .2s;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 240px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: whitesmoke;
     z-index: 20;
-    opacity:0;
-    visibility:hidden;
-    transform:translateX(100%);
-    transition-property: all;
-    transition-duration:.2s;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: .2s;
 }
-nav ul li a{
-    display:block;
-    margin-bottom:16px;
+
+nav ul {
+    list-style: none;
+    padding: 0;
 }
-.active #hmb span:first-child{
-    top:12px;
-    transform: lotate(45deg);
+
+nav ul li {
+    margin-bottom: 16px;
 }
-.active #hmb span:nth-child(2){
+
+nav ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.active #hmb span:first-child {
+    transform: rotate(45deg);
+    transform-origin: 5px 5px;
+}
+
+.active #hmb span:nth-child(2) {
     opacity: 0;
 }
-.active #hmb span:last-child{
-    top:12px;
+
+.active #hmb span:last-child {
     transform: rotate(-45deg);
+    transform-origin: 5px -5px;
 }
-.active nav{
-    visibility:visible;
+
+.active nav {
+    visibility: visible;
     opacity: 1;
     transform: translateX(0);
 }
-.active::before{
-    content:'';
-    position:fixed;
-    top:0;
-    right:0;
-    background-color:black;
-    width:100vw;
-    height:100vh;
-    opacity: 0.4;
-    z-index:10;
+
+.active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 70px; /* ヘッダーの高さ分のマージンを追加 */
+}
+
+#hero h1 {
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+#intro {
+    background-color: #f9f9f9;
+    text-align: center; /* h2を中央寄せ */
+}
+
+h2 {
+    display: inline-block; /* h2をインラインブロックに */
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    border-bottom: 3px solid #f6ac4d;
+}
+
+.introtext {
+    display: flex; /* フレックスボックスで整列 */
+    flex-direction: column; /* 縦に並べる */
+    align-items: flex-start; /* 左寄せ */
+    text-align: center; /* 子要素を中央寄せ */
+}
+
+.introtext h3 {
+    margin-top: 0; /* タイトルの上の余白を削除 */
+    margin-bottom: 20px; /* タイトルの下に余白を追加 */
+    width: 100%; /* タイトルを親要素の幅全体にする */
+    
+}
+
+
+.introtext .origin,
+.introtext .order {
+    width: 100%; /* 各セクションが横幅全体を占める */
+    margin-bottom: 20px; /* 各セクションの間に余白を追加 */
+}
+
+.introtext .origin ul,
+.introtext .order ul {
+    padding-left: 20px; /* リストアイテムの左側に余白を追加 */
+    list-style-type: none; /* デフォルトのマーカーを削除 */
+    margin: 0; /* リスト全体のマージンを削除 */
+}
+
+.introtext .origin ul li,
+.introtext .order ul li {
+    margin-bottom: 10px; /* リストアイテム間に余白を追加 */
+    font-size: 1rem; /* フォントサイズを調整 */
+    color: #333; /* テキストカラーを設定 */
 }
