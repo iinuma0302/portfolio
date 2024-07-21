@@ -133,11 +133,11 @@ nav ul li a {
 
 #intro {
     background-color: #f9f9f9;
-    text-align: center; /* h2を中央寄せ */
+    text-align: center;
 }
 
 h2 {
-    display: inline-block; /* h2をインラインブロックに */
+    display: inline-block;
     font-size: 2rem;
     margin-bottom: 30px;
     font-family: 'Times New Roman', Times, serif;
@@ -145,37 +145,55 @@ h2 {
     border-bottom: 3px solid #f6ac4d;
 }
 
+.intro {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px; /* 画像とテキストの間隔 */
+}
+
+.face {
+    flex: 1;
+}
+
+.face img {
+    max-width: 100%;
+    border-radius: 3px;
+    box-shadow: 0px 4px 16px -8px #000000;
+}
+
 .introtext {
-    display: flex; /* フレックスボックスで整列 */
-    flex-direction: column; /* 縦に並べる */
-    align-items: flex-start; /* 左寄せ */
-    text-align: center; /* 子要素を中央寄せ */
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .introtext h3 {
-    margin-top: 0; /* タイトルの上の余白を削除 */
-    margin-bottom: 20px; /* タイトルの下に余白を追加 */
-    width: 100%; /* タイトルを親要素の幅全体にする */
-    
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1.5rem; /* 名前部分を強調 */
 }
-
 
 .introtext .origin,
 .introtext .order {
-    width: 100%; /* 各セクションが横幅全体を占める */
-    margin-bottom: 20px; /* 各セクションの間に余白を追加 */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .introtext .origin ul,
 .introtext .order ul {
-    padding-left: 20px; /* リストアイテムの左側に余白を追加 */
-    list-style-type: none; /* デフォルトのマーカーを削除 */
-    margin: 0; /* リスト全体のマージンを削除 */
+    padding-left: 20px;
+    list-style-type: none;
+    margin: 0;
 }
 
 .introtext .origin ul li,
 .introtext .order ul li {
-    margin-bottom: 10px; /* リストアイテム間に余白を追加 */
-    font-size: 1rem; /* フォントサイズを調整 */
-    color: #333; /* テキストカラーを設定 */
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
 }

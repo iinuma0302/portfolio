@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
- <!-- Google font-->
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;700&display=swap" rel="stylesheet">
-
-<title>GitHub Pages - sample</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>GitHub Pages - sample</title>
 </head>
 <body>
-    
     <header id="header">
         <a href="" class="logo">logo</a>
         <div id="hmb">
@@ -25,37 +22,38 @@
             <ul>
                 <li><a href="#hero">TOP</a></li>
                 <li><a href="#intro">introduction</a></li>
-                <li><a href="">skills</a></li>
-                <li><a href="">My works</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#works">My works</a></li>
             </ul>
         </nav>
     </header>
-  
+
     <main>
         <section id="hero">
-            <img src="./素材/Mylogo.png"width="25%" alt="コメ">
+            <img src="./素材/Mylogo.png" width="25%" alt="コメ">
             <div class="container">
                 <h1>NUMA's</h1>
                 <h1>portfolio</h1>
             </div>
         </section>
+        
         <section id="intro">
             <h2>My introduction</h2>
             <div class="intro">
                 <div class="face">
-                    <img src="素材/face.png" alt="">
+                    <img src="素材/face.png" alt="顔写真">
                 </div>
                 <div class="introtext">
                     <h3>飯沼佑斗</h3>
                     <div class="origin">
-                        <p>私の経歴</p>
+                        <p>【私の経歴】</p>
                         <ul>
                             <li>2023年:岐阜県某公立高校卒業</li>
                             <li>2023年:同年愛知工業大学へ進学し在学中</li>
                         </ul>
                     </div>
                     <div class="order">
-                        <p>業務内容</p>
+                        <p>【業務内容】</p>
                         <ul>
                             <li>Adobeソフトを使用したコンテンツ制作</li>
                             <li>AutoDesk Mayaを使用した3D制作</li>
@@ -63,12 +61,18 @@
                         </ul>
                     </div>
                 </div>
-        </div>
-
+            </div>
+        </section>
+        
+        <section id="skills">
+            <!-- スキルセクションの内容 -->
         </section>
     </main>
-    <footer>footer</footer>
-        
+
+    <footer>
+        <p>&copy; 2024 NUMA's Portfolio</p>
+    </footer>
+
     <script>
       const hmbBtn = document.getElementById("hmb");
       const header = document.getElementById("header");
