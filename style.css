@@ -132,7 +132,6 @@ nav ul li a {
 }
 
 #intro {
-    background-color: #f9f9f9;
     text-align: center;
     margin-bottom: 100px;
 }
@@ -143,7 +142,7 @@ h2 {
     margin-bottom: 30px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: normal;
-    border-bottom: 3px solid #f6ac4d;
+    border-bottom: 3px solid #98FF98;
 }
 
 .intro {
@@ -201,7 +200,6 @@ h2 {
     color: #333;
 }
 #skills {
-    background-color: #f9f9f9;
     text-align: center;
     margin-bottom: 100px;
     padding-bottom: 20px; /* ボトムに余白を追加 */
@@ -242,4 +240,11 @@ h2 {
 
 .skills p {
     margin: 0; /* パラグラフの余白をリセット */
+}
+
+#works{
+    
+    text-align: center;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
 }
