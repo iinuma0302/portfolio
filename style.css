@@ -125,15 +125,16 @@ nav ul li a {
     margin-top: 70px; /* ヘッダーの高さ分のマージンを追加 */
 }
 
-#hero h1 {
-    font-size: 2rem;
-    font-family: 'Times New Roman', Times, serif;
+.container h1 {
+    font-size: 5rem; /* 文字の大きさを少し大きくする */
+    font-family: 'Times New Roman', Times, serif; /* フォントを統一 */
     font-weight: normal;
 }
 
 #intro {
     background-color: #f9f9f9;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 h2 {
@@ -150,6 +151,8 @@ h2 {
     flex-direction: row;
     align-items: flex-start;
     gap: 20px; /* 画像とテキストの間隔 */
+    max-width: 1000px; /* 最大幅を設定 */
+    margin: 0 auto; /* 左右の余白を自動にして中央寄せ */
 }
 
 .face {
@@ -196,4 +199,47 @@ h2 {
     margin-bottom: 10px;
     font-size: 1rem;
     color: #333;
+}
+#skills {
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-bottom: 100px;
+    padding-bottom: 20px; /* ボトムに余白を追加 */
+}
+
+.skills {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* 全てのブロックを同じ高さにする */
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto; /* 中央揃え */
+}
+
+.skills > div {
+    flex: 1; /* 均等なスペースを割り当てる */
+    margin: 0 10px; /* スキルブロック間の間隔 */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直方向に中央揃え */
+    align-items: center; /* 水平方向に中央揃え */
+    padding: 20px; /* 内部のパディング */
+    box-shadow: 0px 4px 16px -8px #000000; /* ボックスシャドウを追加して統一感を出す */
+    border-radius: 8px; /* 角を丸くする */
+    background-color: white; /* 背景色を白に設定 */
+    min-height: 200px; /* 最低の高さを設定して均等にする */
+}
+
+.skills img {
+    margin-bottom: 20px; /* 画像とテキストの間隔 */
+}
+
+.skills h3 {
+    margin-bottom: 10px; /* タイトルとテキストの間隔 */
+}
+
+.skills p {
+    margin: 0; /* パラグラフの余白をリセット */
 }
