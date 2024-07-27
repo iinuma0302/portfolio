@@ -21,7 +21,6 @@ footer {
 
 #header {
     height: 70px;
-    background-color: white;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -31,7 +30,6 @@ footer {
     left: 0;
     right: 0;
     z-index: 50;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0 20px;
 }
 
@@ -242,9 +240,118 @@ h2 {
     margin: 0; /* パラグラフの余白をリセット */
 }
 
-#works{
-    
+#works {
     text-align: center;
     margin-bottom: 100px;
     padding-bottom: 20px;
+}
+
+/* 共通スタイル */
+.works {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px; /* 最大幅を指定 */
+    margin: 0 auto; /* 中央揃え */
+    gap: 20px; /* ブロック間の間隔 */
+}
+
+/* NCブロックスタイル */
+.NC {
+    display: flex;
+    width: 100%;
+    height: 100%; /* 高さを揃える */
+}
+
+.AN, .PN {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    min-height: 300px;
+    margin-bottom: 50px; /* 下に余白を追加 */
+    border-radius: 8px; /* 角を丸くする */
+    color: white;
+}
+
+.AN {
+    background-color: #007BFF; /* ANの背景色 */
+}
+
+.PN {
+    background-color: #28A745; /* PNの背景色 */
+}
+
+.AN img, .PN img {
+    max-width: 100%;
+    height: auto;
+}
+
+.AN h3, .PN h3 {
+    position: absolute;
+    bottom: -70px; /* ブロックの下に配置 */
+    color: black; /* 色を変更 */
+    margin: 0;
+    padding: 5px 10px; /* パディングを追加 */
+    font-family: "source-han-sans-japanese", sans-serif;
+    font-weight: normal;
+}
+
+/* 2つ目のh3タグの位置をさらに下に調整 */
+.AN h3:nth-of-type(2), .PN h3:nth-of-type(2) {
+    bottom: -100px; /* 2つ目のh3タグをさらに下に配置 */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+.threeD {
+    display: flex; /* 横並びにする */
+    width: 100%;
+    height: 100%; /* 高さを揃える */
+    gap: 20px; /* 要素間の間隔 */
+    margin-top:100px;
+}
+
+.backhoe, .penguin {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    min-height: 300px;
+    border-radius: 8px; /* 角を丸くする */
+    color: white;
+    background-color: #6c757d; /* グレーの背景色 */
+}
+
+.backhoe img, .penguin img {
+    max-width: 80%; /* 画像の幅を80%に設定 */
+    height: auto;
+}
+
+.backhoe h3, .penguin h3 {
+    position: absolute;
+    bottom: -70px; /* ブロックの下に配置 */
+    color: black; /* 色を変更 */
+    margin: 0;
+    padding: 10px 5px; /* パディングを追加 */
+    font-family: "source-han-sans-japanese", sans-serif;
+    font-weight: normal;
+}
+
+/* 2つ目のh3タグの位置をさらに下に調整 */
+.backhoe h3:nth-of-type(2), .penguin h3:nth-of-type(2) {
+    bottom: -100px; /* 2つ目のh3タグをさらに下に配置 */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+.en {
+    font-size: 2rem; /* フォントサイズを調整 */
+    font-weight: bold; /* フォントを太くする場合 */
+    color: #333; /* 必要に応じて色も調整 */
 }
