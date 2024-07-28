@@ -245,9 +245,6 @@ h2 {
     margin-bottom: 100px;
     padding-bottom: 20px;
 }
-
-/* 共通スタイル */
-/* 共通スタイル */
 .works {
     display: flex;
     flex-direction: column;
@@ -401,4 +398,9 @@ h2 {
     font-size: 2rem; /* フォントサイズを調整 */
     font-weight: bold; /* フォントを太くする場合 */
     color: #333; /* 必要に応じて色も調整 */
+}
+#info{
+    text-align: center;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
 }
