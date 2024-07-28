@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 html {
+    scroll-behavior: smooth;
     font-family: 'M PLUS 1', sans-serif;
     overflow-x: hidden;
 }
@@ -13,7 +14,65 @@ footer {
     text-align: center;
     padding: 100px;
 }
-
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      background:#333;
+      text-align:center;
+      color:#fff;
+    }
+    .shutter{
+        width: 100%;
+        height: 100%;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        margin: auto;
+        background-color:#fff;
+        z-index:99;
+        -webkit-animation: byeShutter 2.4s forwards;
+        animation: byeShutter 2.4s forwards;
+      }
+      .logo {
+        position: absolute;
+        width: 500px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-animation: logo 0.8s forwards;
+        animation: logo 0.8s forwards;
+        animation-delay: 0.2s;
+      }
+      @keyframes byeShutter {
+      70% {
+        opacity: 1;
+      }
+      100% {
+        display: none;
+        opacity: 0;
+        z-index: -1;
+      }
+      }
+      @keyframes logo {
+      0% {
+        opacity: 1;
+      }
+        
+      50% {
+        transform: rotate(0deg);     
+      }
+        100% {
+        transform: scale(0.8);
+        }
+      }
 .container {
     width: 90%;
     max-width: 1000px;
@@ -86,10 +145,12 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
 }
+nav ul li a:hover {
+    color: #FF6347; /* 好きな色に変更してください */
+}
 
 .active #hmb span:first-child {
-    transform: rotate(45deg);
-    transform-origin: 5px 5px;
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
 .active #hmb span:nth-child(2) {
@@ -97,8 +158,7 @@ nav ul li a {
 }
 
 .active #hmb span:last-child {
-    transform: rotate(-45deg);
-    transform-origin: 5px -5px;
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .active nav {
@@ -161,6 +221,8 @@ h2 {
     max-width: 100%;
     border-radius: 3px;
     box-shadow: 0px 4px 16px -8px #000000;
+    margin-left: 200px
+
 }
 
 .introtext {
@@ -169,6 +231,7 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    margin-left: 400px; /* ここで適切な値を設定してください */
 }
 
 .introtext h3 {
@@ -405,3 +468,48 @@ h2 {
     margin-bottom: 100px;
     padding-bottom: 20px;
 }
+@media (max-width: 400px) {
+    .intro{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 400px;
+    }
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills > div {
+        width: 90%; /* 幅を指定して正方形に近づける */
+        margin: 10px 0; /* 上下の間隔を調整 */
+    }
+
+    .works {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .NC, .threeD, .logos {
+        flex-direction: column; /* 縦並びにする */
+        width: 90%; /* 幅を指定して正方形に近づける */
+        margin: 10px 0; /* 上下の間隔を調整 */
+    }
+
+    .AN, .PN, .backhoe, .penguin, .vamp, .my {
+        width: 100%; /* 幅を100%に設定 */
+        min-height: 200px; /* 最低の高さを設定 */
+        margin-bottom: 100px; /* 下に余白を追加 */
+    }
+
+    .AN h3, .PN h3, .backhoe h3, .penguin h3, .vamp h3, .my h3 {
+        bottom: -80px; /* h3タグの位置を調整 */
+    }
+
+    /* 2つ目のh3タグの位置をさらに下に調整 */
+    .AN h3:nth-of-type(2), .PN h3:nth-of-type(2), 
+    .backhoe h3:nth-of-type(2), .penguin h3:nth-of-type(2), 
+    .vamp h3:nth-of-type(2), .my h3:nth-of-type(2) {
+        bottom: -100px; /* 2つ目のh3タグをさらに下に配置 */
+    }
+}
+
